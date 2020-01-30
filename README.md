@@ -5,6 +5,8 @@
 
 A Search App Bar like the one in Gmail and Google Photos.
 
+Online Demo: https://rodydavis.github.io/floating_search_bar/
+
 ## Getting Started
 
 If you want to just use the floating bar as an app bar please use `SliverFloatingBar` otherwise use `FloatingSearchBar`.
