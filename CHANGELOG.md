@@ -1,3 +1,12 @@
+## 0.3.0
+
+* Bumping version
+* Updating Example
+* Fixing Readme
+* Adding Demo
+* Adding Pinned Option
+* Adding Padding Option
+
 ## 0.2.0 - 04.06.2019
 
 * Updating Example to be desktop aware

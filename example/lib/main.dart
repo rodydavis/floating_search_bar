@@ -11,8 +11,7 @@ import 'package:flutter/foundation.dart';
 /// main is entry point of Flutter application
 void main() {
   // Desktop platforms aren't a valid platform.
-  _setTargetPlatformForDesktop();
-
+  if (!kIsWeb) _setTargetPlatformForDesktop();
   return runApp(MyApp());
 }
 
@@ -40,9 +39,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
       home: FloatingSearchBar.builder(
+        pinned: true,
         itemCount: 100,
+        padding: EdgeInsets.only(top: 10.0),
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             leading: Text(index.toString()),

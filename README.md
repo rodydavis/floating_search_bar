@@ -9,16 +9,15 @@ A Search App Bar like the one in Gmail and Google Photos.
 
 If you want to just use the floating bar as an app bar please use `SliverFloatingBar` otherwise use `FloatingSearchBar`.
 
-![search](https://github.com/AppleEducate/plugins/blob/master/packages/floating_search_bar/screenshots/search.png)
+![search](https://github.com/rodydavis/floating_search_bar/blob/master/screenshots/search.png)
 
 if you add a drawer the menu icon will show up:
 
-![drawer](https://github.com/AppleEducate/plugins/blob/master/packages/floating_search_bar/screenshots/drawer.png)
+![drawer](https://github.com/rodydavis/floating_search_bar/blob/master/screenshots/drawer.png)
 
 ## Usage
 
-
-``` dart
+```dart
 import 'package:flutter/material.dart';
 
 import 'package:floating_search_bar/floating_search_bar.dart';
