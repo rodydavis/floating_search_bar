@@ -58,6 +58,7 @@ class _MyAppState extends State<MyApp> {
           child: Container(),
         ),
         onChanged: (String value) {},
+        onSubmitted: (String value){},
         onTap: () {},
         decoration: InputDecoration.collapsed(
           hintText: "Search...",

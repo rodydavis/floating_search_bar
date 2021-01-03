@@ -12,6 +12,7 @@ class FloatingSearchBar extends StatelessWidget {
     this.endDrawer,
     this.controller,
     this.onChanged,
+    this.onSubmitted,
     this.title,
     this.decoration,
     this.onTap,
@@ -30,6 +31,7 @@ class FloatingSearchBar extends StatelessWidget {
     this.leading,
     this.controller,
     this.onChanged,
+    this.onSubmitted,
     this.title,
     this.onTap,
     this.decoration,
@@ -49,6 +51,8 @@ class FloatingSearchBar extends StatelessWidget {
   final TextEditingController controller;
 
   final ValueChanged<String> onChanged;
+
+  final ValueChanged<String> onSubmitted;
 
   final InputDecoration decoration;
 
@@ -84,6 +88,7 @@ class FloatingSearchBar extends StatelessWidget {
                           ),
                       autofocus: false,
                       onChanged: onChanged,
+                      onSubmitted: onSubmitted,
                       onTap: onTap,
                     ),
                 trailing: trailing,
