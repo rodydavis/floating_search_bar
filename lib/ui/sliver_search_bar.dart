@@ -150,7 +150,6 @@ class _SliverFloatingBarState extends State<SliverFloatingBar>
   void _updateSnapConfiguration() {
     if (widget.snap && widget.floating) {
       _snapConfiguration = FloatingHeaderSnapConfiguration(
-        vsync: this,
         curve: Curves.easeOut,
         duration: const Duration(milliseconds: 200),
       );
@@ -197,6 +196,7 @@ class _SliverFloatingBarState extends State<SliverFloatingBar>
           snapConfiguration: _snapConfiguration,
           collapsedHeight: collapsedHeight,
           topPadding: topPadding,
+          vsync: this
         ),
       ),
     );
@@ -264,6 +264,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
     required this.snapConfiguration,
     required this.collapsedHeight,
     required this.topPadding,
+    required this.vsync
   });
 
   final Widget? trailing;
@@ -276,6 +277,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   final Widget? title;
   final double? collapsedHeight;
   final double topPadding;
+  final TickerProvider? vsync;
 
   @override
   double get minExtent => collapsedHeight ?? (topPadding + kToolbarHeight);
