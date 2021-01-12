@@ -17,7 +17,7 @@ class FloatingSearchBar extends StatelessWidget {
     this.onTap,
     this.padding = EdgeInsets.zero,
     this.pinned = false,
-    @required List<Widget> children,
+    required List<Widget> children,
   }) : _childDelagate = SliverChildListDelegate(
           children,
         );
@@ -35,27 +35,27 @@ class FloatingSearchBar extends StatelessWidget {
     this.decoration,
     this.padding = EdgeInsets.zero,
     this.pinned = false,
-    @required IndexedWidgetBuilder itemBuilder,
-    @required int itemCount,
+    required IndexedWidgetBuilder itemBuilder,
+    required int itemCount,
   }) : _childDelagate = SliverChildBuilderDelegate(
           itemBuilder,
           childCount: itemCount,
         );
 
-  final Widget leading, trailing, body, drawer, endDrawer;
+  final Widget? leading, trailing, body, drawer, endDrawer;
 
   final SliverChildDelegate _childDelagate;
 
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
-  final ValueChanged<String> onChanged;
+  final ValueChanged<String>? onChanged;
 
-  final InputDecoration decoration;
+  final InputDecoration? decoration;
 
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   /// Override the search field
-  final Widget title;
+  final Widget? title;
 
   final bool pinned;
 
